@@ -32,7 +32,10 @@ export const io = new Server(server, {
   },
 });
 
-const port = 5000;
+// Get the port from the environment or default to 5000 (for local development)
+const port = process.env.PORT || 5000;
+
+// Start the server
 server.listen(port, function () {
-  console.log('app listening on port : ' + port);
+  console.log('App listening on port : ' + port);
 });
